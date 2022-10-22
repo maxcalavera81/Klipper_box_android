@@ -39,6 +39,7 @@ install_armbian-software() {
   echo ""
   echo "A instalar Armbian Software..."
   echo ""
+  sudo su
   armbian-software || :
 }
 
@@ -89,6 +90,7 @@ start_kiauh() {
   echo ""
   echo "A iniciar Kiauh..."
   echo ""
+  exit
   cd ~
   git clone https://github.com/th33xitus/kiauh.git
   ./kiauh/kiauh.sh
