@@ -88,7 +88,7 @@ install_git() {
   sudo apt-get install git -y
 }
 
-exit_root_user() {
+leave_root() {
   echo ""
   echo "Sair do user root..."
   echo ""
