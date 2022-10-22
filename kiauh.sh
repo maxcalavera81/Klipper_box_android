@@ -41,6 +41,5 @@ main() {
   echo "Se o link acima não funcionar, tenta o seguinte link http://${ip_addr}:8123/"
   echo "Aproveita o teu home assistant :)"
 
-  exit 0
 }
 main
