@@ -23,6 +23,7 @@ readonly HOSTNAME="klipper"
 # Ensures the hostname of the Pi is correct.
 # ------------------------------------------------------------------------------
 update_hostname() {
+    sudo su
     hostname
     sudo hostname klipper
     hostname "${HOSTNAME}"
@@ -39,7 +40,6 @@ install_armbian-software() {
   echo ""
   echo "A instalar Armbian Software..."
   echo ""
-  sudo su
   armbian-software || :
 }
 
