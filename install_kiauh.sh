@@ -91,6 +91,17 @@ leave_root() {
   echo ""
 }
 
+# ------------------------------------------------------------------------------
+# Install kiauh
+# ------------------------------------------------------------------------------
+start_kiauh() {
+  echo ""
+  echo "A iniciar Kiauh..."
+  echo ""
+  cd ~
+  git clone https://github.com/th33xitus/kiauh.git
+  ./kiauh/kiauh.sh
+}
 
 # ==============================================================================
 # RUN LOGIC
@@ -110,7 +121,7 @@ main() {
   install_dependences
   install_docker
   leave_root
-
+  start_kiauh
 
   # Friendly closing message
   ip_addr=$(hostname -I | cut -d ' ' -f1)
