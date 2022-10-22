@@ -105,15 +105,14 @@ start_kiauh() {
 # ------------------------------------------------------------------------------
 main() {
   # Are we root?
-#  if [[ $EUID -ne 0 ]]; then
-#    echo "This script must be run as root."
-#    echo "Please try again after running:"
-#    echo "  sudo su"
-#    exit 1
-#  fi
+  if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root."
+    echo "Please try again after running:"
+    echo "  sudo su"
+    exit 1
+  fi
 
   # Install ALL THE THINGS!
-  sudo_su
   update_hostname
   install_armbian-software
   install_dependences
