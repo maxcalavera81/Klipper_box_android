@@ -34,13 +34,7 @@ start_kiauh() {
 # RUN LOGIC
 # ------------------------------------------------------------------------------
 main() {
-  # Are we root?
-  if [[ $EUID -ne 0 ]]; then
-    echo "This script must be run as root."
-    echo "Please try again after running:"
-    echo "  sudo su"
-    exit 1
-  fi
+
 
   # Install ALL THE THINGS!
   start_kiauh
