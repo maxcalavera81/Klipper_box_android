@@ -110,7 +110,7 @@ main() {
   install_dependences
   install_docker
   leave_root
-  install_hassio
+
 
   # Friendly closing message
   ip_addr=$(hostname -I | cut -d ' ' -f1)
