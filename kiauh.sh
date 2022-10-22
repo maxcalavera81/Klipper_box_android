@@ -92,7 +92,7 @@ leave_root() {
   echo ""
   echo "Sair do user root..."
   echo ""
-  exit || :
+  su outro_user
 }
 
 # ------------------------------------------------------------------------------
