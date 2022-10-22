@@ -88,7 +88,7 @@ leave_root() {
   echo "Sair do user root..."
   echo ""
   exit
-  curl -sL https://raw.githubusercontent.com/maxcalavera81/Klipper_box_android/main/teste.sh | bash -s
+#  curl -sL https://raw.githubusercontent.com/maxcalavera81/Klipper_box_android/main/teste.sh | bash -s
 
 # ------------------------------------------------------------------------------
 # Install kiauh
