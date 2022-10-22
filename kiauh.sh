@@ -21,7 +21,7 @@ readonly HOSTNAME="klipper"
 # ------------------------------------------------------------------------------
 # Ensures the hostname of the Pi is correct.
 # ------------------------------------------------------------------------------
-update_hostname() {
+sudo_su() {
     sudo su
 }
 # ------------------------------------------------------------------------------
@@ -104,12 +104,12 @@ start_kiauh() {
 # ------------------------------------------------------------------------------
 main() {
   # Are we root?
-#  if [[ $EUID -ne 0 ]]; then
-#    echo "This script must be run as root."
-#    echo "Please try again after running:"
-#    echo "  sudo su"
-#    exit 1
-#  fi
+  if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root."
+    echo "Please try again after running:"
+    echo "  sudo su"
+    exit 1
+  fi
 
   # Install ALL THE THINGS!
   sudo_su
