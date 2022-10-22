@@ -106,6 +106,7 @@ main() {
     echo "  sudo su"
     exit 1
   fi
+  sudo su
 
   # Install ALL THE THINGS!
   update_hostname
