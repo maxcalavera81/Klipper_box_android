@@ -23,7 +23,6 @@ readonly HOSTNAME="klipper"
 # Ensures the hostname of the Pi is correct.
 # ------------------------------------------------------------------------------
 update_hostname() {
-    sudo su
     hostname
     sudo hostname klipper
     hostname "${HOSTNAME}"
