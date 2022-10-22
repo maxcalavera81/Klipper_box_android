@@ -118,7 +118,7 @@ main() {
   install_dependences
   install_docker
   install_git
-  leave_root
+#  leave_root
 #  start_kiauh
 
   # Friendly closing message
