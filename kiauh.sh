@@ -20,77 +20,6 @@ readonly HOSTNAME="klipper"
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# Ensures the hostname of the Pi is correct.
-# ------------------------------------------------------------------------------
-update_hostname() {
-    sudo su
-    hostname
-    sudo hostname klipper
-    hostname "${HOSTNAME}"
-    echo ""
-    echo "O nome do host será alterado na próxima reinicialização para: ${HOSTNAME}"
-    echo ""
-
-}
-
-# ------------------------------------------------------------------------------
-# Installs armbian software
-# ------------------------------------------------------------------------------
-install_armbian-software() {
-  echo ""
-  echo "A instalar Armbian Software..."
-  echo ""
-  armbian-software || :
-}
-
-
-# ------------------------------------------------------------------------------
-# Installs dependences
-# ------------------------------------------------------------------------------
-install_dependences() {
-  echo ""
-  echo "A instalar dependencias..."
-  echo ""
-  sudo apt-get install \
-  apparmor \
-  jq \
-  wget \
-  curl \
-  udisks2 \
-  libglib2.0-bin \
-  network-manager \
-  dbus \
-  systemd-journal-remote -y
-}
-
-# ------------------------------------------------------------------------------
-# Installs the Docker engine
-# ------------------------------------------------------------------------------
-install_docker() {
-  echo ""
-  echo "A instalar Docker..."
-  echo ""
-  curl -fsSL https://get.docker.com | sh
-}
-
-# ------------------------------------------------------------------------------
-# Install os-agents
-# ------------------------------------------------------------------------------
-install_git() {
-  echo ""
-  echo "A instalar Git..."
-  echo ""
-  sudo apt-get install git -y
-}
-
-leave_root() {
-  echo ""
-  echo "Sair do user root..."
-  echo ""
-  exit
-#  curl -sL https://raw.githubusercontent.com/maxcalavera81/Klipper_box_android/main/teste.sh | bash -s
-
-# ------------------------------------------------------------------------------
 # Install kiauh
 # ------------------------------------------------------------------------------
 start_kiauh() {
@@ -114,12 +43,6 @@ main() {
   fi
 
   # Install ALL THE THINGS!
-  update_hostname
-  install_armbian-software
-  install_dependences
-  install_docker
-  install_git
-  leave_root
   start_kiauh
 
   # Friendly closing message
