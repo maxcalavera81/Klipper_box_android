@@ -120,7 +120,7 @@ main() {
   install_docker
   install_git
   leave_root
-#  start_kiauh
+  start_kiauh
 
   # Friendly closing message
   ip_addr=$(hostname -I | cut -d ' ' -f1)
