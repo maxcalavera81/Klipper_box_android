@@ -81,11 +81,18 @@ install_docker() {
 # ------------------------------------------------------------------------------
 # Install os-agents
 # ------------------------------------------------------------------------------
-install_git() {
+leave_root() {
   echo ""
   echo "A instalar Git..."
   echo ""
   sudo apt-get install git -y
+}
+
+exit_root_user() {
+  echo ""
+  echo "Sair do user root..."
+  echo ""
+  exit
 }
 
 # ------------------------------------------------------------------------------
@@ -95,7 +102,6 @@ start_kiauh() {
   echo ""
   echo "A iniciar Kiauh..."
   echo ""
-  exit
   cd ~
   git clone https://github.com/th33xitus/kiauh.git
   ./kiauh/kiauh.sh
@@ -118,6 +124,7 @@ main() {
   install_dependences
   install_docker
   install_git
+  leave_root
   start_kiauh
 
   # Friendly closing message
