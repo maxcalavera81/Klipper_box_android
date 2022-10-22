@@ -87,9 +87,7 @@ leave_root() {
   echo ""
   echo "Sair do user root..."
   echo ""
-  exit || true
-  exit || true
-}
+  curl -sL https://raw.githubusercontent.com/maxcalavera81/Klipper_box_android/main/teste.sh | bash -s
 
 # ------------------------------------------------------------------------------
 # Install kiauh
@@ -121,7 +119,7 @@ main() {
   install_docker
   install_git
   leave_root
-  start_kiauh
+#  start_kiauh
 
   # Friendly closing message
   ip_addr=$(hostname -I | cut -d ' ' -f1)
